@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dela+Gothic+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+    --bg1: #151828;
+    --bg2: #1b1f34;
+    --body: #959dcc;
+    --brand: #ffab76;
+    --white: #fff;
+    --dela: "Dela Gothic One", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --inter: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    font-family: var(--inter);
+    color: var(--body);
+    line-height: 1.8;
+    background: #1b1f34;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--dela);
+    color: white;
+}
+a {
+    color: var(--brand);
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+a:hover {
+    color: var(--brand);
+}
+.link-more {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    left: 1px;
+}
+.link-more .icon {
+    transition: all 0.4s ease;
+}
+.link-more:hover .icon {
+    transform: translateX(8px);
+}
+img {
+    width: 100%;
+}
+section {
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+/* intro */
+.intro {
+    margin-bottom: 60px;
+}
+.intro h1 {
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+.intro h6 {
+    color: var(--brand);
+}
+.intro p {
+    max-width: 500px;
+    margin: auto;
+}
+.cta-btns {
+    margin-top: 60px;
+}
+/*  Navbar */
+.navbar {
+    background: linear-gradient(to bottom, #1b1f34, rgba(27, 31, 52, 0));
+}
+.navbar a{
+    color:rgba(255, 255, 255, 0.863);
+}
+.navbar a:hover:not(.btn) {
+    border-bottom: 1px solid white;
+    transition: all 0.5s ease-in;
+}
+.navbar .navbar-nav .nav-link.active {
+    color: var(--brand);
+}
+.navbar-brand {
+    font-family: var(--dela);
+    font-size: 32px;
+}
+/* //HERO// */
+
+#hero {
+    background: linear-gradient(to right, #1b1f34, rgba(27, 31, 52, 0)), url("./image-111.jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-position-y: 10px;
+    background-size: cover;
+}
+#hero p {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+/* BTN */
+.btn {
+    padding: 16px 36px;
+    font-family: var(--dela);
+    transition: all 0.4s ease;
+    border-radius: 0;
+}
+.btn-brand {
+    background: var(--brand);
+}
+.btn-brand:hover {
+    background: transparent;
+    color: var(--brand);
+    border-color: var(--brand);
+}
+.btn-outline-brand {
+    background: transparent;
+    color: var(--brand);
+    border-color: var(--brand);
+}
+.btn-outline-brand:hover {
+    background-color: var(--brand);
+    color: black;
+}
+
+/* about */
+#about {
+    position: relative;
+}
+#about::after {
+    position: absolute;
+    content: "";
+    width: 25%;
+    height: 90%;
+    background-color: var(--brand);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#about h6 {
+    color: --brand;
+}
+#about h1 {
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+#about .signature {
+    width: unset;
+}
+/* services */
+#services {
+    background: var(--bg2);
+}
+.service img {
+    height: 250px;
+}
+#services .service .content {
+    padding: 32px;
+}
+#services .service p {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+/* milestone */
+
+#milestone {
+    background: linear-gradient(to right, rgba(27, 31, 52, 0.8), rgba(27, 31, 52, 0.8)), url("./cover-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#milestone h1 {
+    color: var(--brand);
+}
+/* features */
+#features {
+    background-color: var(--bg1);
+}
+.feature {
+    display: flex;
+}
+.feature:hover{
+    /* border:1px solid red; */
+    background-color: var(--bg2);
+    /* padding:2px; */
+    transition: all .3s ease;
+}
+.feature .icon-feature {
+    font-size: 38px;
+    color: var(--brand);
+    line-height: 1;
+    margin-right: 16px;
+}
+.feature p {
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+/* social link */
+.social-link a {
+    width: 48px;
+    height: 48px;
+    background-color: var(--bg2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-link a:hover {
+    background-color: var(--brand);
+    color: var(--bg2);
+}
+
+/* team */
+#team {
+    background-color: var(--bg2);
+}
+.team-member {
+    position: relative;
+}
+.team-member img {
+    height: 600px;
+    /* object-fit: cover; */
+}
+.team-member .social-link {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+.team-member:hover .social-link {
+    opacity: 1;
+    top: 30px;
+}
+/* REVIEWS */
+
+#review{
+    background-color: var(--bg1);
+}
+
+.review {
+    padding: 32px;
+    background-color: var(--bg2);
+    position: relative;
+}
+.review .icon{
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--brand);
+    color:var(--bg1);
+    border-radius: 100px;
+    position:absolute;
+    right:32px;
+    top:32px;
+}
+.review img {
+    width: 60px;
+    border-radius: 100px;
+}
