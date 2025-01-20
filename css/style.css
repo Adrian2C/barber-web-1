@@ -25,7 +25,7 @@ h6 {
     color: white;
 }
 a {
-    color: var(--brand);
+    color: var(--body);
     text-decoration: none;
     transition: all 0.4s ease;
 }
@@ -75,8 +75,16 @@ section {
 .navbar {
     background: linear-gradient(to bottom, #1b1f34, rgba(27, 31, 52, 0));
 }
-.navbar a{
-    color:rgba(255, 255, 255, 0.863);
+@media screen and (max-width: 990px) {
+    .navbar {
+        background: linear-gradient(45deg, black, #00000080);
+    }
+    .navbar a{
+        font-size: 18px;
+    }
+}
+.navbar a {
+    color: rgba(255, 255, 255, 0.863);
 }
 .navbar a:hover:not(.btn) {
     border-bottom: 1px solid white;
@@ -183,11 +191,11 @@ section {
 .feature {
     display: flex;
 }
-.feature:hover{
+.feature:hover {
     /* border:1px solid red; */
     background-color: var(--bg2);
     /* padding:2px; */
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 .feature .icon-feature {
     font-size: 38px;
@@ -238,7 +246,7 @@ section {
 }
 /* REVIEWS */
 
-#review{
+#review {
     background-color: var(--bg1);
 }
 
@@ -247,20 +255,93 @@ section {
     background-color: var(--bg2);
     position: relative;
 }
-.review .icon{
-    width:42px;
-    height:42px;
-    display:flex;
+.review .icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--brand);
-    color:var(--bg1);
+    color: var(--bg1);
     border-radius: 100px;
-    position:absolute;
-    right:32px;
-    top:32px;
+    position: absolute;
+    right: 32px;
+    top: 32px;
 }
 .review img {
     width: 60px;
     border-radius: 100px;
+}
+
+/* blog */
+#blog {
+    background-color: var(--bg2);
+}
+.blog-post {
+    position: relative;
+}
+
+.blog-post .date {
+    width: 100px;
+    height: 100px;
+    background-color: var(--brand);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.blog-post .day {
+    font-size: 32px;
+    line-height: 1;
+    font-family: var(--dela);
+    color: var(--bg1);
+}
+.blog-post .year {
+    color: var(--bg1);
+}
+/* submit */
+#booking {
+    background: linear-gradient(to right, rgba(27, 31, 52, 0.8), rgba(27, 31, 52, 0.8)), url("./cover-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#booking form {
+    background: var(--bg1);
+    padding: 32px;
+}
+#booking form .form-control {
+    background-color: var(--bg2);
+    border-radius: 0;
+    margin-top: 16px;
+    border: 2px solid var(--bg2);
+    border-color: var(--bg2);
+    color: var(--body);
+}
+#booking form .form-control::placeholder {
+    color: var(--body);
+}
+#booking form input {
+    height: 58px;
+}
+#booking form .form-control:focus {
+    box-shadow: none;
+    border-left: 1px solid var(--brand);
+}
+/* footer */
+footer {
+    padding-top: 16px;
+}
+footer .social-link {
+    display: flex;
+}
+footer .social-link a {
+    margin-right: 5px;
+}
+.footer-bottom {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-top: 1px solid var(--body);
 }
